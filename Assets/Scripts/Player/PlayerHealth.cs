@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
 
@@ -43,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
         {
             damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
-        damaged = false;
+        damaged = false;  
     }
 
 
