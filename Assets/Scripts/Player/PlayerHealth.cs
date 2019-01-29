@@ -78,6 +78,24 @@ public class PlayerHealth : MonoBehaviour
         playerShooting.enabled = false;
     }
 
+    public bool Heal(int amountHeal)
+    {
+        if( currentHealth + amountHeal > startingHealth)
+        {
+            return false;
+        } else
+        {
+            currentHealth += amountHeal;
+            healthSlider.value = currentHealth;
+
+            if (currentHealth == 100 && !isDead)
+            {
+                damaged = false;
+            }
+
+            return true;
+        }
+    }
 
     public void RestartLevel ()
     {
